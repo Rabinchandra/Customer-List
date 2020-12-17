@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer List</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="registration">
+        <div class="registration__header">
+          <header class="animate">New Customer Registration</header>
+          <small class="animate"
+            >Register a new customer by entering their details in the input
+            fields.</small
+          >
+        </div>
+        <form class="form" id="form">
+          <div>
+            <i class="fas fa-user animate"></i>
+            <input
+              type="text"
+              id="name"
+              placeholder="Name"
+              autocomplete="off"
+              spellcheck="false"
+              class="animate"
+              required
+            />
+          </div>
+          <div>
+            <i class="fas fa-envelope animate"></i>
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              autocomplete="off"
+              spellcheck="false"
+              class="animate"
+              required
+            />
+          </div>
+          <div>
+            <i class="fas fa-map-marked-alt animate"></i>
+            <input
+              type="text"
+              id="address"
+              placeholder="Address"
+              autocomplete="off"
+              spellcheck="false"
+              class="animate"
+              required
+            />
+          </div>
+          <div>
+            <i class="fas fa-briefcase animate"></i>
+            <input
+              type="text"
+              id="profession"
+              placeholder="Profession"
+              autocomplete="off"
+              spellcheck="false"
+              class="animate"
+              required
+            />
+          </div>
+          <div>
+            <i class="fas fa-phone animate"></i>
+
+            <select id="country-code" class="animate">
+              <option value="india" select>+91</option>
+              <option value="usa" select>+1</option>
+              <option value="germany" select>+49</option>
+              <option value="uk" select>+44</option>
+            </select>
+            <input
+              type="number"
+              id="phone"
+              placeholder="Phone"
+              autocomplete="off"
+              class="animate"
+            />
+          </div>
+          <div class="gender animate">
+            <header>Gender</header>
+            <input
+              type="radio"
+              id="male"
+              name="gender"
+              value="male"
+              class="gender-input animate"
+              required
+            />
+            <label for="male" class="animate">Male</label>
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+              class="gender-input animate"
+              required
+            />
+            <label for="female" class="animate">Female</label>
+          </div>
+          <button type="submit" id="submit" class="animate">
+            <i class="fas fa-user-plus"></i> Add Customer
+          </button>
+        </form>
+      </section>
+      <section class="customer-list">
+        <header>CUSTOMER LIST</header>
+        <div class="search__container">
+          <i class="fas fa-search" id="search-icon"></i>
+          <input
+            type="text"
+            id="search"
+            placeholder="Search customer here..."
+            autocomplete="off"
+          />
+        </div>
+        <section class="customer-list-wrapper">
+          <ul class="list" id="list"></ul>
+          <section class="customer-detail"></section>
+        </section>
+      </section>
+    </div>
+  </body>
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/node-uuid/1.4.8/uuid.min.js"
+    integrity="sha512-rV0Q1QWodkoLjts/qP2XHtjvUPTmN46k4eH0lzOR3mDui8a0YnL/uqydipXA9mQ2wG6J4imL0BO6/26rcFho7Q=="
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="./app.js" type="module"></script>
+</html>
